@@ -22,7 +22,7 @@ model.add(Dense(units=1,input_dim=1))
 model.compile(optimizer='sgd',loss='mse')
 
 # 训练3001次 分批次 因为数据不是很大 干脆每批次寻来拿所有数据
-for i in tqdm(range(3000)):
+for _ in tqdm(range(3000)):
     # train_on_batch 返回
     cost = model.train_on_batch(x_data,y_data)
 
